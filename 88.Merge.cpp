@@ -4,8 +4,7 @@ using namespace std;
 
 #include <string>
 #include <sstream>
-
-void Multi_Input1(vector<int>& v)
+void Multi_Input(vector<int>& v)
 {
     string line; //line一会用于存储从cin得到的一整行数据
     cout << "请输入若干数字，须使用空格分隔，按回车提交: " << endl;
@@ -67,11 +66,11 @@ public:
 int main()
 {
     vector<int> nums2;
-    Multi_Input1(nums2);
+    Multi_Input(nums2);
     int n = nums2.size();
 
     vector<int> nums1;
-    Multi_Input1(nums1);
+    Multi_Input(nums1);
     int m = nums1.size() - n;
 
     Solution s;
