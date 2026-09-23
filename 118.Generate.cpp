@@ -42,24 +42,24 @@ public:
     vector<vector<int>> Result;
 
 
-    vector<vector<int>> generate(int numRows)
+    vector<vector<int>> generate(int rowIndex)
     {
 
-        if (numRows == 1)
+        if (rowIndex == 1)
         {
             Result.push_back({1});
         }
-        else if (numRows == 2)
+        else if (rowIndex == 2)
         {
             Result.push_back({1});
             Result.push_back({1, 1});
         }
-        else if (numRows >= 3)
+        else if (rowIndex >= 3)
         {
             Result.push_back({1});
             Result.push_back({1, 1});
             Front = {1, 1};
-            for (int row = 3; row <= numRows; row++)    //层
+            for (int row = 3; row <= rowIndex; row++)    //层
             {
                 Next.push_back(1);
                 for (int midNums = 1; midNums < row - 1; midNums++) //层内数
